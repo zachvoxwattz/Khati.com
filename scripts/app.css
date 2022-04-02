@@ -1,0 +1,90 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+h1
+{
+    padding: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    background-color: black;
+    font-size: 72px;
+    color: white;
+}
+
+textarea::selection 
+{
+    background-color: transparent;
+}
+
+body
+{
+    background-color: black;
+}
+
+.emoBox
+{
+    margin-top: 0.5%;
+    margin-bottom: 2.5%;
+    padding: 1%;
+    width: 43.5%;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    text-align: justify;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    background-color: white;
+}
+
+
+button
+{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: sans-serif;
+    border-width: 0px;
+    width: 25%;
+    height: 50px;
+    display: flex;
+    display: grid;
+    margin: auto;
+    margin-top: 10px;
+    transition-duration: 500ms;
+    border-radius: 10px;
+    color:darkslategray
+}
+
+button:active
+{
+    color: white;
+    border-style: outset
+}
+
+.genButt:hover
+{
+    background-color: lime;
+}
+
+.genButt:active
+{
+    transition-duration: 200ms;
+    background-color: green;
+}
+
+.copButt:hover
+{
+    background-color: aqua;
+}
+
+.copButt:active
+{
+    transition-duration: 200ms;
+    background-color: #054d95 ;
+}
