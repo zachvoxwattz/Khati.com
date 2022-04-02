@@ -15,7 +15,7 @@ function generateEmojis()
     }
 
     document.getElementById('contentArea').textContent = returnerEmos
-    document.getElementById('genButt').textContent = "Don't like it? Have another one!"
+    document.getElementById('genButt').textContent = "Don't like it? Have another pile!"
 
     clearInterval(genButtTimeout)
     genButtTimeout = setInterval(function () { document.getElementById('genButt').textContent = 'Generate Emojis'}, 3000)
