@@ -3,33 +3,63 @@
     margin: 0;
     padding: 0;
 }
-
+:focus
+{
+    outline: none;
+}
 h1
 {
-    padding: 50px;
+    padding: 1.5%;
     text-align: center;
     font-family: sans-serif;
     background-color: black;
     font-size: 72px;
+    font-weight: bold;
     color: white;
 }
 
-textarea::selection 
+/* RAINBOW EFX
+h1
 {
-    background-color: transparent;
+    padding: 1.5%;
+    text-align: center;
+	background: linear-gradient(-45deg, red, orange, yellow, lime, blue, magenta, purple);
+	background-size: 300%;
+	font-family: sans-serif;
+	font-weight: 750;
+	font-size: 5vw;
+	letter-spacing: -5px;
+	text-transform: uppercase;
+	-webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: animated_text 2s ease-in-out infinite;
+	-moz-animation: animated_text 2s ease-in-out infinite;
+	-webkit-animation: animated_text 2s ease-in-out infinite;
 }
+
+@keyframes animated_text {
+	0% { background-position: 0px 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0px 50%; }
+}
+*/
 
 body
 {
     background-color: black;
 }
 
+.emoBox::selection 
+{
+    background-color: transparent;
+}
+
 .emoBox
 {
-    margin-top: 0.5%;
-    margin-bottom: 2.5%;
+    margin-bottom: 10px;
     padding: 1%;
-    width: 43.5%;
+    width: 50%;
     font-size: 20px;
     border-radius: 8px;
     font-family: sans-serif;
@@ -39,6 +69,27 @@ body
     margin-right: auto;
     resize: none;
     background-color: white;
+}
+
+.customEmoBox
+{
+    padding: 1%;
+    width: 50%;
+    font-size: 15px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    text-align: justify;
+    font-style: normal;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    resize: none;
+    background-color: white;
+}
+
+.customEmoBox::placeholder
+{
+    font-style: italic
 }
 
 
@@ -58,7 +109,7 @@ button
     margin-top: 10px;
     transition-duration: 500ms;
     border-radius: 8px;
-    color:darkslategray
+    color:darkslategray;
 }
 
 button:active
