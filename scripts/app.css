@@ -13,7 +13,7 @@ h1
     text-align: center;
     font-family: sans-serif;
     background-color: black;
-    font-size: 72px;
+    font-size: 450%;
     font-weight: bold;
     color: white;
 }
@@ -27,7 +27,7 @@ h1
 	background-size: 300%;
 	font-family: sans-serif;
 	font-weight: 750;
-	font-size: 5vw;
+	font-size: 450%;
 	letter-spacing: -5px;
 	text-transform: uppercase;
 	-webkit-background-clip: text;
@@ -50,6 +50,11 @@ body
     background-color: black;
 }
 
+.emoBox, .customEmoBox, button
+{
+    border-radius: 8px;
+}
+
 .emoBox::selection 
 {
     background-color: transparent;
@@ -60,8 +65,7 @@ body
     margin-bottom: 10px;
     padding: 1%;
     width: 50%;
-    font-size: 20px;
-    border-radius: 8px;
+    font-size: 125%;
     font-family: sans-serif;
     text-align: justify;
     display: block;
@@ -75,10 +79,9 @@ body
 {
     padding: 1%;
     width: 50%;
-    font-size: 15px;
-    border-radius: 8px;
+    font-size: 85%;
     font-family: sans-serif;
-    text-align: justify;
+    text-align: center;
     font-style: normal;
     display: block;
     margin-left: auto;
@@ -98,17 +101,16 @@ button
     text-align: center;
     display: flex;
     align-items: center;
-    font-size: 24px;
+    font-size: 120%;
     font-family: sans-serif;
     border-width: 0px;
     width: 25%;
-    height: 50px;
+    height: 7.5vh;
     display: flex;
     display: grid;
     margin: auto;
     margin-top: 10px;
     transition-duration: 500ms;
-    border-radius: 8px;
     color:darkslategray;
 }
 
