@@ -3,10 +3,8 @@
     margin: 0;
     padding: 0;
 }
-:focus
-{
-    outline: none;
-}
+:focus {  outline: none; }
+
 h1
 {
     padding: 1.5%;
@@ -45,20 +43,10 @@ h1
 }
 */
 
-body
-{
-    background-color: black;
-}
-
-.emoBox, .customEmoBox, button
-{
-    border-radius: 8px;
-}
+body {  background-color: black; }
 
 .emoBox::selection 
-{
-    background-color: transparent;
-}
+{ background-color: transparent; }
 
 .emoBox
 {
@@ -66,6 +54,7 @@ body
     padding: 1%;
     width: 50%;
     font-size: 125%;
+    border-radius: 8px;
     font-family: sans-serif;
     text-align: justify;
     display: block;
@@ -79,7 +68,8 @@ body
 {
     padding: 1%;
     width: 50%;
-    font-size: 85%;
+    font-size: 100%;
+    border-radius: 8px;
     font-family: sans-serif;
     text-align: center;
     font-style: normal;
@@ -90,54 +80,37 @@ body
     background-color: white;
 }
 
-.customEmoBox::placeholder
-{
-    font-style: italic
-}
-
+.customEmoBox::placeholder { font-style: italic }
 
 button
 {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    font-size: 120%;
-    font-family: sans-serif;
-    border-width: 0px;
-    width: 25%;
-    height: 7.5vh;
-    display: flex;
-    display: grid;
-    margin: auto;
-    margin-top: 10px;
+    border-width: 0%;
+    border-radius: 8px;
+    width: 25.75%;
+    height: 5.5vh;
+    font-size: 115%;
+    margin-top: 0.5%;
+    margin-left: 0.15%;
+    margin-right: 0.15%;
     transition-duration: 500ms;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
     color:darkslategray;
 }
+
+#buttonbox { text-align: center }
 
 button:active
 {
     color: white;
-    border-style: outset
-}
-
-.genButt:hover
-{
-    background-color: lime;
-}
-
-.genButt:active
-{
     transition-duration: 200ms;
-    background-color: green;
 }
 
-.copButt:hover
-{
-    background-color: aqua;
-}
+button:focus { outline: none }
 
-.copButt:active
-{
-    transition-duration: 200ms;
-    background-color: #054d95 ;
-}
+.genButt:hover { background-color: lime; }
+.genButt:active { background-color: green; }
+
+.copButt:hover { background-color: aqua; }
+.copButt:active { background-color: #054d95; }

@@ -70,3 +70,9 @@ function playSound(name)
     audioFile.volume = 0.05
     audioFile.play()
 }
+
+function onChangeTest(val)
+{
+    console.log(val)
+    console.log(document.getElementById('customEmoji').value)
+}
