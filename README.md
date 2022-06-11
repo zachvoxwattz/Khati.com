@@ -1,5 +1,5 @@
 # How to run
-Simply double click on the 'Khati.com' Ink file
+Simply double click on the 'Application.html' file to open.
 
 # What to update
 Output based on various inputs:
