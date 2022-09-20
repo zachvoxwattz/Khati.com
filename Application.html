@@ -3,22 +3,45 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Khati.com - An arrow away from solving emojis problems!</title>
-        <link rel="stylesheet" href="./scripts/app.css">
         <link rel="icon" type="image/x-icon" href="./resources/img/tabicon.png">
-        <script src='./scripts/core.js'></script>
+        <link rel="stylesheet" href="./resources/stylings.css">
+        <title>Khati.com - The solution to Emoji problems!</title>
+        
+        <!--Initializes all JavaScript components-->
+        <script src="./resources/js/generator.js"></script>
+        <script src="./resources/js/audio.js"></script>
     </head>
 
     <body>
-        <h1>Khati.com Deluxo</h1>
+        <div id="appBody">
+            <div id="appLabelBox">
+                <h1 id="appLabel">Khati.com Ultra</h1>
+            </div>
 
-        <textarea readonly class="emoBox" id="contentArea" rows="15">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor. Duis at consectetur lorem donec. Feugiat nisl pretium fusce id velit ut tortor pretium. Ut venenatis tellus in metus vulputate. Eget est lorem ipsum dolor sit amet. Sit amet consectetur adipiscing elit pellentesque. Vel pharetra vel turpis nunc eget lorem dolor. Consequat mauris nunc congue nisi vitae suscipit tllus mauris a. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Vivamus arcu felis bibendum ut tristique et egestas quis. In hac habitasse platea dictumst. Enim blandit volutpat maecenas volutpat. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Mauris commodo quis imperdiet massa tincidunt nunc. Dui id ornare arcu odio ut sem. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Commodo sed egestas egestas fringilla. Elementum integer enim neque volutpat ac.</textarea>
-        
-        <textarea class="customEmoBox" id="customEmoji" rows="1" placeholder="Input some emojis to customize your output. If no value presents, default preset is used. "></textarea>
-        
-        <div id="buttonbox">
-            <button id="genButt" class="genButt" onclick="generateEmojis()">Generate Emojis</button>
-            <button id="copButt" class="copButt" onclick="copyToClipboard()">Jam it to Clipboard</button>
+            <div id="appCoreBox">
+                <div id="appContentBox">
+                    <textarea id="appContentArea" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor. Duis at consectetur lorem donec. Feugiat nisl pretium fusce id velit ut tortor pretium. Ut venenatis tellus in metus vulputate. Eget est lorem ipsum dolor sit amet. Sit amet consectetur adipiscing elit pellentesque. Vel pharetra vel turpis nunc eget lorem dolor. Consequat mauris nunc congue nisi vitae suscipit tllus mauris a. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Vivamus arcu felis bibendum ut tristique et egestas quis. In hac habitasse platea dictumst. Enim blandit volutpat maecenas volutpat. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Mauris commodo quis imperdiet massa tincidunt nunc. Dui id ornare arcu odio ut sem. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Commodo sed egestas egestas fringilla. Elementum integer enim neque volutpat ac."></textarea>
+
+                    <button id="clearButton" onclick="clearContents()">🔥</button>
+                </div>
+
+                <div id="appCustomizationBox">
+                    <div id="appCustomizationArea">
+                        <textarea id="appCustomizationField" rows="3" placeholder="Emojis ONLY! Enter some of them here to customize results (The 'Flaming Heart' emoji is included by default). If no value presents, default preset is used."></textarea>
+                    </div>
+
+                    <div id="appButtonBox">
+                        <button id="generateButton" onclick="getEmojis()">Gimme a pile of Emojis!</button>
+                        <button id="copyButton" onclick="toClipboard()">Jam em' to the Clipboard</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
+    
+    <!--Get all working Elements within the HTML page-->
+    <script src="./resources/js/elements.js"></script>
+
+    <!--Executes the main script-->
+    <script src="./resources/js/core.js"></script>
 </html>

@@ -1,0 +1,149 @@
+*
+{
+    margin: 0;
+    padding: 0
+}
+
+*:focus { outline: none; }
+
+body
+{
+    background-color: black;
+}
+
+#appBody
+{
+    text-align: center;
+    margin: 2.5vh auto 0px auto;
+    max-width: 1280px;
+    max-height: 720px;
+}
+
+#appLabel
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 4.5em;
+    margin-bottom: 2.5vh
+}
+
+#appCoreBox
+{
+    margin: 0px 40px 0px 40px
+}
+
+#appContentBox
+{
+    float: left
+}
+
+#appContentArea
+{
+    resize: none;
+    background-color: black;
+    font-family: 'Segoe UI Emoji';
+    border-color: white;
+    border-width: 2px;
+    font-size: 1.2em;
+    border-radius: 8px;
+    padding: 10px;
+    width: 550px;
+    height: 550px;
+}
+
+#clearButton
+{
+    display: block;
+    font-size: 1.5em;
+    background-color: transparent;
+}
+
+#appContentArea::placeholder
+{
+    font-style: italic;
+    padding: 10px auto;
+}
+
+#appCustomizationBox
+{
+    float: right
+}
+
+#appCustomizationField
+{
+    resize: none;
+    text-align: center;
+    font-family: 'Segoe UI Emoji';
+    overflow: hidden;
+    color: white;
+    border-color: white;
+    background-color: black;
+    border-width: 2px;
+    font-size: 2.5em;
+    border-radius: 8px;
+    padding: 10px;
+    width: 350px;
+    height: 200px;
+}
+
+#appCustomizationField:focus::placeholder 
+{ 
+  transform: translateX(50vw); 
+  -webkit-transform: translateX(50vw); 
+  -moz-transform: translateX(50vw); 
+  -o-transform: translateX(50vw); 
+}
+
+#appCustomizationField::placeholder
+{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    font-size: 0.5em;
+    transition: transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
+}
+
+#appButtonBox 
+{
+    margin-top: 2.5vh
+}
+
+#generateButton, #copyButton
+{
+    display: block;
+    border-radius: 16px;
+    font-size: 1.5em;
+    width: 375px;
+    height: 50px;
+    transition-duration: 500ms;
+}
+
+#generateButton:hover
+{
+    background-color: #fcae1e;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#generateButton:active
+{
+    background-color: #fd6a02;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#copyButton:hover
+{
+    background-color: #ed2939 ;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#copyButton:active
+{
+    background-color: #990000;
+    color: white;
+    transition-duration: 250ms;
+}
