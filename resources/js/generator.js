@@ -1,14 +1,19 @@
-const generateEmoji = (customPreset) => {
+const generateEmoji = (customPreset, customLineCount) => {
     let returnText = ''
     let baseArray = null
+    let iterateCount = 0
 
-    if (!customPreset) { 
-        baseArray = defaultPreset
-    } else {
+    customPreset ?
         baseArray = processCustomPreset(customPreset)
-    }
+        :
+        baseArray = defaultPreset
 
-    for (let ix = 0; ix < NUMBER_OF_LINES * 11; ix++) {
+    customLineCount ? 
+        iterateCount = customLineCount 
+        : 
+        iterateCount = DEFAULT_NUMBER_OF_LINES
+    
+    for (let ix = 0; ix < iterateCount * 11; ix++) {
         let randomIndex = Math.floor(Math.random() * baseArray.length)    
         returnText += baseArray[randomIndex]
     }

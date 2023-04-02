@@ -9,15 +9,29 @@ const clearContents = () => {
 }
 
 const getEmojis = () => {
-    if (customizeField.value != '') {
-        if (RegExPattern.test(customizeField.value)) {
-            alert(INCORRECT_FORMAT_MESSAGE)
+    let inputSet = emojiCustomField.value
+    let inputLineCount = lineCountCustomField.value
+    let passedArg1, passedArg2
+
+    if (inputSet != '') {
+        if (EmojiRegExPattern.test(emojiCustomField.value)) {
+            alert(INCORRECT_EMOJI_FORMAT_MESSAGE)
             return
         }
-        contentArea.value = generateEmoji(customizeField.value)
-    } else {
-        contentArea.value = generateEmoji()
+        passedArg1 = inputSet
     }
+    else passedArg1 = false
+
+    if (inputLineCount != '') {
+        if (!LineCountRegExPattern.test(inputLineCount)) {
+            alert(INCORRECT_LINECOUNT_FORMAT_MESSAGE)
+            return
+        }
+        passedArg2 = parseInt(inputLineCount)
+    }
+    else passedArg2 = false
+
+    contentArea.value = generateEmoji(passedArg1, passedArg2)
     generateButton.textContent = "Don't like it? Have another pile!"
 
     clearInterval(generateButtonLabelTimer)

@@ -1,6 +1,6 @@
 const playSound = (soundName) => {
     let audioFile = new Audio('./resources/audio/' + soundName + '.mp3')
-    audioFile.volume = 0.175
+    audioFile.volume = 0.125
     audioFile.play()
 }
 
