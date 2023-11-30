@@ -1,0 +1,187 @@
+/* GLOBAL stylings */
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+*:focus { outline: none; }
+
+body {
+    background-color: black;
+}
+
+#app_main {
+    text-align: center;
+}
+
+/* Stylings for the Title label */
+#app_label {
+    margin: 3vh 0 3vh 0;
+    font-size: 4.125vw;
+    color: white;
+}
+
+/* Stylings for the display area */
+#app_body_div {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto 0 auto;
+    width: 75vw;
+}
+
+#app_display_div {
+    display: block;
+    width: 65%;
+}
+
+#app_display_box {
+    width: 90%;
+    height: 40vh;
+    border-width: 2px;
+    border-radius: 8px;
+    border-color: white;
+    padding: 1%;
+    background-color: #0a0215;
+    resize: none;
+    font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
+}
+
+#app_display_box::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#app_display_box::placeholder {
+    font-style: italic;
+    font-size: 1.1vw;
+    font-weight: lighter;
+}
+
+#app_display_clear_button {
+    display: block;
+    margin: 0 auto 0 auto;
+    font-size: 2vw;
+    background-color: transparent;
+    border-width: 0;
+}
+
+
+
+
+/* Stylings for Customization area*/
+#app_customize_div {
+    width: 35%;
+    height: 40vh + 2vh;
+    margin: 0 auto 0 auto;
+}
+
+#app_customize_area {
+    width: 97.5%;
+    height: 32vh;
+}
+
+#app_customize_emoji_input_box {
+    width: 100%;
+    height: 20vh;
+    font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
+    resize: none;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    border-color: white;
+    background-color: #0a0215;
+    border-width: 2px;
+    font-size: 1.25vw;
+    border-radius: 8px;
+    padding: 1%;
+}
+
+#app_customize_emoji_input_box::placeholder {
+    text-align: left;
+    font-size: 1vw;
+    transition: transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
+}
+
+#app_customize_emoji_input_box:focus::placeholder { 
+    transform: translateX(50vw); 
+    -webkit-transform: translateX(50vw); 
+    -moz-transform: translateX(50vw); 
+    -o-transform: translateX(50vw); 
+  }
+
+#app_customize_linecount_input_box {
+    width: 100%;
+    resize: none;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    border-color: white;
+    background-color: #0a0215;
+    font-size: 1vw;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 1%;
+}
+
+#app_customize_linecount_input_box::placeholder {
+    font-size: 1vw;
+    transition: transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
+}
+
+#app_customize_linecount_input_box:focus::placeholder {
+    transform: translateX(50vw); 
+    -webkit-transform: translateX(50vw); 
+    -moz-transform: translateX(50vw); 
+    -o-transform: translateX(50vw); 
+}
+
+#app_customize_button_area {
+    display: block;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#app_customize_generate_button, #app_customize_copy_button {
+    width: 100%;
+    height: 47.5%;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border-radius: 8px;
+    border-width: 0;
+    border-color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_generate_button:hover {
+    background-color: #fcae1e;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_generate_button:active {
+    background-color: #fd6a02;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_copy_button:hover {
+    background-color: #ed2939 ;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_copy_button:active {
+    background-color: #990000;
+    color: white;
+    transition-duration: 250ms;
+}

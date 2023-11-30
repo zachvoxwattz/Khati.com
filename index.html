@@ -4,8 +4,9 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/x-icon" href="./resources/images/tabicon.png">
-        <link rel="apple-touch-icon" href="/resources/images/apple-touch-icon.png"/>
-        <link rel="stylesheet" href="./resources/stylings.css">
+        <link rel="apple-touch-icon" href="/resources/images/apple-touch-icon.png">
+        <link rel="stylesheet" href="./resources/stylings/pc.css">
+        <link rel="stylesheet" href="./resources/stylings/mobile.css">
         <title>Khati.com - The solution to Emoji problems!</title>
         
         <!--Initializes all JavaScript components-->
@@ -14,30 +15,26 @@
     </head>
 
     <body>
-        <div id="appBody">
-            <div id="appLabelBox">
-                <h1 id="appLabel">Khati.com Ultra</h1>
-            </div>
+        <div id="app_main">
+            <h1 id="app_label">Khati.com Lambda</h1>
+            
+            <div id="app_body_div">
+                <div id="app_display_div">
+                    <textarea id="app_display_box" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor. Duis at consectetur lorem donec. Feugiat nisl pretium fusce id velit ut tortor pretium. Ut venenatis tellus in metus vulputate. Eget est lorem ipsum dolor sit amet. Sit amet consectetur adipiscing elit pellentesque. Vel pharetra vel turpis nunc eget lorem dolor. Consequat mauris nunc congue nisi vitae suscipit tllus mauris a. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Vivamus arcu felis bibendum ut tristique et egestas quis. In hac habitasse platea dictumst. Enim blandit volutpat maecenas volutpat. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Mauris commodo quis imperdiet massa tincidunt nunc. Dui id ornare arcu odio ut sem. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Commodo sed egestas egestas fringilla. Elementum integer enim neque volutpat ac."></textarea>
 
-            <div id="appCoreBox">
-                <div id="appContentBox">
-                    <textarea id="appContentArea" readonly placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor. Duis at consectetur lorem donec. Feugiat nisl pretium fusce id velit ut tortor pretium. Ut venenatis tellus in metus vulputate. Eget est lorem ipsum dolor sit amet. Sit amet consectetur adipiscing elit pellentesque. Vel pharetra vel turpis nunc eget lorem dolor. Consequat mauris nunc congue nisi vitae suscipit tllus mauris a. Non pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus. Vivamus arcu felis bibendum ut tristique et egestas quis. In hac habitasse platea dictumst. Enim blandit volutpat maecenas volutpat. Pulvinar elementum integer enim neque volutpat ac tincidunt vitae. Mauris commodo quis imperdiet massa tincidunt nunc. Dui id ornare arcu odio ut sem. Potenti nullam ac tortor vitae purus faucibus ornare suspendisse sed. Commodo sed egestas egestas fringilla. Elementum integer enim neque volutpat ac."></textarea>
-
-                    <button id="clearButton" onclick="clearContents()">🔥</button>
+                    <button id="app_display_clear_button" onclick="clearContents()">🔥</button>
                 </div>
 
-                <div id="appCustomizationBox">
-                    <div id="appCustomizationArea">
-                        <textarea id="appEmojiCustomizationField" rows="3" placeholder="Emojis ONLY! Enter some of them here to customize results. If no value presents, default preset is used."></textarea>
+                <div id="app_customize_div">
+                    <div id="app_customize_area">
+                        <textarea id="app_customize_emoji_input_box" rows="3" placeholder="Emojis ONLY! Enter some of them here to customize results. If no value presents, default preset is used."></textarea>
+
+                        <textarea id="app_customize_linecount_input_box" rows="1" placeholder="# of desired emoji lines (Default: 30)"></textarea>
                     </div>
 
-                    <div id="appLineCountCustomization">
-                        <textarea id="appLineCountCustomizationField" rows="1" placeholder="# of desired emoji lines (Default: 30)"></textarea>
-                    </div>
-
-                    <div id="appButtonBox">
-                        <button id="generateButton" onclick="getEmojis()">Gimme a pile of Emojis!</button>
-                        <button id="copyButton" onclick="toClipboard()">Jam em' to the Clipboard</button>
+                    <div id="app_customize_button_area">
+                        <button id="app_customize_generate_button" onclick="getEmojis()">Gimme a pile of Emojis!</button>
+                        <button id="app_customize_copy_button" onclick="toClipboard()">Jam em' to the Clipboard</button>
                     </div>
                 </div>
             </div>
