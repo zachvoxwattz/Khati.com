@@ -17,12 +17,23 @@ body {
 #appLabel {
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    font-size: 4.5em;
+    font-size: 4vw;
     margin-bottom: 3.75vh
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #appLabel {
+        font-size: 10vw
+    }
+}
+
 #appContentBox {
-    float: left
+    float: left;
+    padding: 0 2.5vw 0 0;
+    width: 45vw;
+    height: 45vh
 }
 
 #appContentArea {
@@ -31,11 +42,12 @@ body {
     font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
     border-color: white;
     border-width: 2px;
-    font-size: 1.2em;
+    font-size: 1vw;
     border-radius: 8px;
-    padding: 10px;
-    width: 45vw;
-    height: 45vh;
+    padding: 1vh 1vw 1vh 1vw;
+    width: 100%;
+    height: 100%
+    
 }
 
 #appContentArea::-webkit-scrollbar {
@@ -45,6 +57,7 @@ body {
 
 #appContentArea::placeholder {
     font-style: italic;
+    font-size: 1vw;
 }
 
 #clearButton {
@@ -54,8 +67,26 @@ body {
     border-width: 0;
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #appContentArea {
+        font-size: 1.25em;
+    }
+
+    #appContentArea::placeholder {
+        font-size: 1em;
+    }
+
+    #clearButton {
+        font-size: 5em;
+    }
+}
+
 #appCustomizationBox {
-    float: right
+    float: right;
+    padding: 0 0 0 2.5vw;
+    height: 45vh;
 }
 
 #appEmojiCustomizationField {
@@ -67,11 +98,21 @@ body {
     border-color: white;
     background-color: black;
     border-width: 2px;
-    font-size: 2.25em;
+    font-size: 2vw;
     border-radius: 8px;
     padding: 10px;
     width: 22.5vw;
     height: 20vh;
+}
+
+#appEmojiCustomizationField::placeholder {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    font-size: 1vw;
+    transition: transform 0.25s ease-in-out;
+    -webkit-transition: -webkit-transform 0.25s ease-in-out;
+    -moz-transition: -moz-transform 0.25s ease-in-out;
+    -o-transition: -o-transform 0.25s ease-in-out;
 }
 
 #appEmojiCustomizationField:focus::placeholder { 
@@ -79,16 +120,6 @@ body {
   -webkit-transform: translateX(50vw); 
   -moz-transform: translateX(50vw); 
   -o-transform: translateX(50vw); 
-}
-
-#appEmojiCustomizationField::placeholder {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    text-align: left;
-    font-size: 0.5em;
-    transition: transform 0.25s ease-in-out;
-    -webkit-transition: -webkit-transform 0.25s ease-in-out;
-    -moz-transition: -moz-transform 0.25s ease-in-out;
-    -o-transition: -o-transform 0.25s ease-in-out;
 }
 
 #appLineCountCustomizationField {
@@ -99,7 +130,7 @@ body {
     color: white;
     border-color: white;
     background-color: black;
-    font-size: 1em;
+    font-size: 1vw;
     border-width: 2px;
     border-radius: 8px;
     padding: 10px;
@@ -109,6 +140,7 @@ body {
 
 #appLineCountCustomizationField::placeholder {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1vw;
     transition: transform 0.25s ease-in-out;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
     -moz-transition: -moz-transform 0.25s ease-in-out;
@@ -122,6 +154,27 @@ body {
     -o-transform: translateX(50vw); 
 }
 
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #appEmojiCustomizationField, #appLineCountCustomizationField {
+        font-size: 2em
+    }
+
+    #appLineCountCustomizationField {
+        height: 2.5vh
+    }
+
+    #appLineCountCustomizationField::placeholder {
+        padding: auto;
+        font-size: 0.6em
+    }
+
+    #appEmojiCustomizationField::placeholder {
+        font-size: 0.75em
+    }
+}
+
 #appButtonBox {
     margin-top: 5vh
 }
@@ -131,10 +184,20 @@ body {
     border-width: 0;
     border-radius: 16px;
     margin-bottom: 1vh;
-    font-size: 1.25em;
+    font-size: 1.25vw;
     width: 100%;
-    height: 50px;
+    height: 5vh;
     transition-duration: 500ms;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+    #generateButton, #copyButton {
+        font-size: 1.5em;
+        white-space: normal;
+        word-wrap: break-word;
+    }
 }
 
 #generateButton:hover {

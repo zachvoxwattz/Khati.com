@@ -9,12 +9,12 @@ const clearContents = () => {
 }
 
 const getEmojis = () => {
-    let inputSet = emojiCustomField.value
-    let inputLineCount = lineCountCustomField.value
+    let inputSet = emojiCustomField.value.trim()
+    let inputLineCount = lineCountCustomField.value.trim()
     let passedArg1, passedArg2
 
     if (inputSet != '') {
-        if (EmojiRegExPattern.test(emojiCustomField.value)) {
+        if (!EmojiRegExPattern.test(inputSet)) {
             alert(INCORRECT_EMOJI_FORMAT_MESSAGE)
             return
         }
@@ -22,6 +22,7 @@ const getEmojis = () => {
     }
     else passedArg1 = false
 
+    inputLineCount.trim()
     if (inputLineCount != '') {
         if (!LineCountRegExPattern.test(inputLineCount)) {
             alert(INCORRECT_LINECOUNT_FORMAT_MESSAGE)
