@@ -50,6 +50,17 @@ body {
     font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
 }
 
+#app_display_box::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#app_display_box::placeholder {
+    font-style: italic;
+    font-size: 1.1vw;
+    font-weight: lighter;
+}
+
 #app_display_clear_button {
     font-size: 2vw;
     background-color: transparent;
@@ -58,10 +69,12 @@ body {
 
 #app_customize_input_area {
     background-color: cyan;
+    width: calc(100% - 10px - 1vw);
 }
 
 #app_customize_emoji_input_box {
     width: calc(100% - 10px - 1vw);
+    height: 50%;
     float: right;
     font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
     resize: none;
@@ -78,7 +91,7 @@ body {
 
 #app_customize_emoji_input_box::placeholder {
     text-align: left;
-    font-size: 1vw;
+    font-size: 0.85vw;
     transition: transform 0.25s ease-in-out;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
     -moz-transition: -moz-transform 0.25s ease-in-out;
@@ -93,11 +106,22 @@ body {
 }
 
 #app_customize_linecount_input_box {
+    width: calc(100% - 10px - 1vw);
     float: right;
+    resize: none;
+    text-align: center;
+    overflow: hidden;
+    color: white;
+    border-color: white;
+    background-color: #0a0215;
+    font-size: 1vw;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
 
 #app_customize_linecount_input_box::placeholder {
-    font-size: 1vw;
+    font-size: 0.75vw;
     transition: transform 0.25s ease-in-out;
     -webkit-transition: -webkit-transform 0.25s ease-in-out;
     -moz-transition: -moz-transform 0.25s ease-in-out;
