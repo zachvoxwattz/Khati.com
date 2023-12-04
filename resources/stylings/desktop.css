@@ -24,9 +24,9 @@ body {
     text-align: center;
 }
 
-#app_body_div {
+#app_main_components_div {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 #app_display_div {
@@ -34,13 +34,16 @@ body {
 }
 
 #app_customize_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 25%;
 }
 
 #app_display_box {
     width: calc(100% - 10px - 1vw);
     height: 50vh;
-    font-size: 1vw;
+    font-size: 1.25vw;
     border-width: 2px;
     border-radius: 8px;
     border-color: white;
@@ -61,22 +64,27 @@ body {
     font-weight: lighter;
 }
 
-#app_display_clear_button {
+#app_clear_button {
+    display: block;
     font-size: 2vw;
     background-color: transparent;
     border-width: 0;
 }
 
 #app_customize_input_area {
-    background-color: cyan;
-    width: calc(100% - 10px - 1vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(35vh + 2px);
 }
 
 #app_customize_emoji_input_box {
     width: calc(100% - 10px - 1vw);
-    height: 50%;
+    height: calc(85% - 10px - 1vh);
+    margin-left: auto;
     float: right;
     font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
+    font-size: 1.75vw;
     resize: none;
     text-align: center;
     overflow: hidden;
@@ -84,7 +92,6 @@ body {
     border-color: white;
     background-color: #0a0215;
     border-width: 2px;
-    font-size: 1.25vw;
     border-radius: 8px;
     padding: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
@@ -107,6 +114,8 @@ body {
 
 #app_customize_linecount_input_box {
     width: calc(100% - 10px - 1vw);
+    height: calc(15% - 10px - 1vh);
+    margin-left: auto;
     float: right;
     resize: none;
     text-align: center;
@@ -133,4 +142,49 @@ body {
     -webkit-transform: translateX(50vw); 
     -moz-transform: translateX(50vw); 
     -o-transform: translateX(50vw); 
+}
+
+#app_customize_button_area {
+    display: flex;
+    height: calc(15vh);
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 0 calc(0.5vh) 0
+}
+
+.app_customize_generic_button {
+    width: calc(100% - 0.5vw);
+    margin-left: auto;
+    height: 47.50%;
+    font-size: 1.2vw;
+    font-weight: bold;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: darkgoldenrod;
+    transition-duration: 250ms;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+}
+
+#app_customize_generate_button:hover {
+    background-color: #fcae1e;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_generate_button:active {
+    background-color: #fd6a02;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_copy_button:hover {
+    background-color: teal ;
+    color: white;
+    transition-duration: 250ms;
+}
+
+#app_customize_copy_button:active {
+    background-color: rgb(2, 78, 78);
+    color: white;
+    transition-duration: 250ms;
 }

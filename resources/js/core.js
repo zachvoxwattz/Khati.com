@@ -1,16 +1,16 @@
 const clearContents = () => {
-    if (contentArea.value == '') {
+    if (displayBox.value == '') {
         playSound('erase_fail')
         return
     }
 
-    contentArea.value = ''
+    displayBox.value = ''
     playSound('erase')
 }
 
 const getEmojis = () => {
-    let inputSet = emojiCustomField.value.trim()
-    let inputLineCount = lineCountCustomField.value.trim()
+    let inputSet = emojiInputField.value.trim()
+    let inputLineCount = lineCountInputField.value.trim()
     let passedArg1, passedArg2
 
     if (inputSet != '') {
@@ -32,8 +32,8 @@ const getEmojis = () => {
     }
     else passedArg2 = false
 
-    contentArea.value = generateEmoji(passedArg1, passedArg2)
-    generateButton.textContent = "Don't like it? Have another pile!"
+    displayBox.value = generateEmoji(passedArg1, passedArg2)
+    generateButton.textContent = "Hate it? Have another pile!"
 
     clearInterval(generateButtonLabelTimer)
     generateButtonLabelTimer = setInterval(() => { generateButton.textContent = generateButtonDefaultLabel }, labelCooldownDuration * 1000)
@@ -42,13 +42,13 @@ const getEmojis = () => {
 }
 
 const toClipboard = () => {
-    if (contentArea.value == '') {
+    if (displayBox.value == '') {
         playSound(getRandomSound('copy_fail'))
         return
     }
 
-    navigator.clipboard.writeText(contentArea.value)
-    copyButton.textContent = "Jammed to Clipboard!"
+    navigator.clipboard.writeText(displayBox.value)
+    copyButton.textContent = "Clipboard jamm'd!"
     
     clearInterval(copyButtonLabelTimer)
     copyButtonLabelTimer = setInterval(() => { copyButton.textContent = copyButtonDefaultLabel }, labelCooldownDuration * 1000)

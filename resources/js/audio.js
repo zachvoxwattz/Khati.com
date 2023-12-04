@@ -1,7 +1,9 @@
+let soundObject = document.createElement("audio")
+
 const playSound = (soundName) => {
-    let audioFile = new Audio('./resources/audio/' + soundName + '.mp3')
-    audioFile.volume = 0.125
-    audioFile.play()
+    soundObject.setAttribute('src', './resources/audio/' + soundName + '.mp3')
+    soundObject.volume = 0.125
+    soundObject.play()
 }
 
 const getRandomSound = (str) => {
