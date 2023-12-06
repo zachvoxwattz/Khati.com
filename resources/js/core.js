@@ -5,6 +5,7 @@ const clearContents = () => {
     }
 
     displayBox.value = ''
+    clearButton.textContent = "🌫️"
     playSound('erase')
 }
 
@@ -38,20 +39,32 @@ const getEmojis = () => {
     clearInterval(generateButtonLabelTimer)
     generateButtonLabelTimer = setInterval(() => { generateButton.textContent = generateButtonDefaultLabel }, labelCooldownDuration * 1000)
 
+    clearButton.textContent = "🔥"
     playSound('generate')
 }
 
 const toClipboard = () => {
+    clearInterval(copyButtonLabelTimer)
+
     if (displayBox.value == '') {
         playSound(getRandomSound('copy_fail'))
+        copyButton.textContent = "Nothing to jam! 🥺"
+        copyButtonLabelTimer = setInterval(() => { 
+                copyButton.textContent = copyButtonDefaultLabel 
+            }, 
+            labelCooldownDuration * 1000
+        )
         return
     }
 
     navigator.clipboard.writeText(displayBox.value)
-    copyButton.textContent = "Clipboard jamm'd!"
+    copyButton.textContent = "Jamm'd to Clipboard!"
     
-    clearInterval(copyButtonLabelTimer)
-    copyButtonLabelTimer = setInterval(() => { copyButton.textContent = copyButtonDefaultLabel }, labelCooldownDuration * 1000)
+    copyButtonLabelTimer = setInterval(() => { 
+            copyButton.textContent = copyButtonDefaultLabel 
+        }, 
+        labelCooldownDuration * 1000
+    )
     
     playSound(getRandomSound('copy'))
 }
