@@ -53,7 +53,8 @@ and (max-device-width: 480px) {
     #app_display_box {
         width: calc(100% - 2px - 3vw);
         height: 50vh;
-        font-size: 1.125vh;
+        font-size: 1.85vh;
+        font-family: 'Segoe UI Emoji', 'Noto Emoji', system-ui;
         border-width: 1px;
         border-radius: 8px;
         border-color: white;
@@ -69,7 +70,7 @@ and (max-device-width: 480px) {
     
     #app_display_box::placeholder {
         font-style: italic;
-        font-size: 0.85vh;
+        font-size: 1.8vh;
     }
 
     #app_clear_button {

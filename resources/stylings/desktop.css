@@ -159,7 +159,7 @@ and (min-device-width: 720px) {
     }
     
     .app_customize_generic_button {
-        width: calc(100% - 0.5vw);
+        width: calc(97.5%);
         margin-left: auto;
         height: 47.50%;
         font-size: 1.2vw;
