@@ -15,7 +15,7 @@ const getEmojis = () => {
     let passedArg1, passedArg2
 
     if (inputSet != '') {
-        if (!EmojiRegExPattern.test(inputSet)) {
+        if (!LegacyEmojiRegExPattern.test(inputSet) && !UniversalEmojiRegExPattern.test(inputSet)) {
             alert(INCORRECT_EMOJI_FORMAT_MESSAGE)
             return
         }

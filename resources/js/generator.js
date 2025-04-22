@@ -11,7 +11,7 @@ const generateEmoji = (customPreset, customLineCount) => {
     customLineCount ? 
         iterateCount = customLineCount 
         : 
-        iterateCount = DEFAULT_NUMBER_OF_LINES
+        iterateCount = getRandomCount()
     
     for (let ix = 0; ix < iterateCount * 11; ix++) {
         let randomIndex = Math.floor(Math.random() * baseArray.length)    
